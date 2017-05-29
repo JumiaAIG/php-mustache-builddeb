@@ -22,16 +22,16 @@ COPY src /src
 
 # INSTALL PACKAGES DEPENDENCIES
 RUN mkdir /pkg
-ADD https://github.com/marcelosousaalmeida/libmustache4-builddeb/releases/download/v0.4.2/libmustache4_0.4.2-1_amd64.deb /root/
+ADD https://github.com/marcelosousaalmeida/libmustache4-builddeb/releases/download/v0.4.3/libmustache4_0.4.3-1_amd64.deb /root/
 RUN dpkg -i /root/*.deb
 
 # CREATE PACKAGE
-ENV VERSION 0.7.2
+ENV VERSION 0.7.3
 RUN git clone git://github.com/jbboehr/php-mustache.git --recursive ;\
   cd php-mustache ;\
   cp -r /src/* /root/php-mustache/. ;\
   phpize ;\
   ./configure --enable-mustache ;\
-  checkinstall -y --install=no --pkgname='php5-mustache' --pkgversion='$VERSION' --pkggroup='php' --pkgsource='https://github.com/jbboehr/php-mustache' --maintainer='Marcelo Almeida \<marcelo.almeida@jumia.com\>' --requires='php5-common \(\>= 5.6.0\), libc6 \(\>= 2.19), libgcc1 \(\>= 1:4.9.2\), libmustache4 \(\>= 0.4.2\), libstdc++6 \(\>= 1:4.9.2\)' --include=include_etc
+  checkinstall -y --install=no --pkgname='php5-mustache' --pkgversion='$VERSION' --pkggroup='php' --pkgsource='https://github.com/jbboehr/php-mustache' --maintainer='Marcelo Almeida \<marcelo.almeida@jumia.com\>' --requires='php5-common \(\>= 5.6.0\), libc6 \(\>= 2.19), libgcc1 \(\>= 1:4.9.2\), libmustache4 \(\>= 0.4.3\), libstdc++6 \(\>= 1:4.9.2\)' --include=include_etc
 
 VOLUME ["/pkg"]

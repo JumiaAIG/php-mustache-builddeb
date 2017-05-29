@@ -1,4 +1,4 @@
-FROM marceloalmeida/php-docker:7.0
+FROM marceloalmeida/php-docker:7.1
 
 MAINTAINER Marcelo Almeida <marcelo.almeida@jumia.com>
 
@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libyaml-0-2 \
   libphp5-embed \
   make \
-  php7.0-dev
+  php7.1-dev
 
 COPY src /src
 
@@ -32,6 +32,6 @@ RUN git clone git://github.com/jbboehr/php-mustache.git --recursive ;\
   cp -r /src/* /root/php-mustache/. ;\
   phpize ;\
   ./configure --enable-mustache ;\
-  checkinstall -y --install=no --pkgname='php7.0-mustache' --pkgversion='$VERSION' --pkggroup='php' --pkgsource='https://github.com/jbboehr/php-mustache' --maintainer='Marcelo Almeida \<marcelo.almeida@jumia.com\>' --requires='php7.0-common \(\>= 7.0.7\), libc6 \(\>= 2.19), libgcc1 \(\>= 1:4.9.2\), libmustache4 \(\>= 0.4.3\), libstdc++6 \(\>= 1:4.9.2\)' --include=include_etc
+  checkinstall -y --install=no --pkgname='php7.1-mustache' --pkgversion='$VERSION' --pkggroup='php' --pkgsource='https://github.com/jbboehr/php-mustache' --maintainer='Marcelo Almeida \<marcelo.almeida@jumia.com\>' --requires='php7.1-common \(\>= 7.1.5\), libc6 \(\>= 2.19), libgcc1 \(\>= 1:4.9.2\), libmustache4 \(\>= 0.4.3\), libstdc++6 \(\>= 1:4.9.2\)' --include=include_etc
 
 VOLUME ["/pkg"]
