@@ -22,7 +22,7 @@ COPY src /src
 
 # INSTALL PACKAGES DEPENDENCIES
 RUN mkdir /pkg
-ADD https://github.com/marcelosousaalmeida/libmustache4-builddeb/releases/download/v0.4.3/libmustache4_0.4.3-1_amd64.deb /root/
+ADD https://github.com/marceloalmeida/libmustache4-builddeb/releases/download/v0.4.3/libmustache4_0.4.3-1_amd64.deb /root/
 RUN dpkg -i /root/*.deb
 
 # CREATE PACKAGE
