@@ -1,13 +1,9 @@
-# Buildtask for Couchbase driver for PHP
-
-[![Build Status](https://travis-ci.org/marceloalmeida/php-mustache-builddeb.svg?branch=master)](https://travis-ci.org/marceloalmeida/php-mustache-builddeb)
-
 Task to build Debian packages of Mustache library for PHP.
 
 
 ## Dependencies
 
-* [libmustache4_0.4.2-1_amd64.deb](https://github.com/marceloalmeida/libmustache4-builddeb/releases/download/v0.4.2/libmustache4_0.4.2-1_amd64.deb)
+* [libmustache4_0.4.4-1_amd64.deb](https://github.com/JumiaAIG/libmustache4-builddeb/releases/download/0.4.4/libmustache4_0.4.4-1_amd64.deb)
 
 ## Usage
 
